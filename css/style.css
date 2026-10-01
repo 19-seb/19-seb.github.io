@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #fff0f6;
+    color: #333;
+    font-family: "Comic Sans MS", "Arial Rounded MT Bold", sans-serif;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    gap: 25px;
+    padding: 15px 20px;
+    background-color: #000000;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px #000000;
+}
+
+/* Navigation links */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Makes links change when you hover */
+nav a:hover {
+    color: #ffe4f1;
+}
+
+/* ALL titles and headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Arial Rounded MT Bold", "Comic Sans MS", sans-serif;
+    color: #000000;
+    text-shadow: 2px 2px white;
+}
+
+/* Main title */
+h1 {
+    font-size: 45px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Lists */
+ul {
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px #000000;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+/* Main content */
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #fff8fc;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px #000000;
+}
+
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Arial Rounded MT Bold", "Comic Sans MS", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+body {
+    background-color: antiquewhite;
+}
+ 
+nav {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: #305b9b;
+}
+ 
+nav a {
+  text-decoration: none;
+  color: rgb(245, 245, 245);
+  font-weight: bold;
+}
+ 
+nav a:hover {
+  color:rgb(0, 0, 0)
+}
