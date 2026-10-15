@@ -1,22 +1,33 @@
-<link rel="stylesheet" href="css/style.css">
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Me</a>
-  <a href="work.html">My Work</a>
-</nav>
+<!-- CHANGED: moved <!DOCTYPE html> to the very first line. It used to come after the <link> and <nav>, which made the browser treat the page as broken. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- CHANGED: added a viewport meta tag so the page scales properly on phones. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sebastien-A — Studio Profile</title>
+  <!-- CHANGED: moved the stylesheet <link> into <head> (it was above the doctype in the body). -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Sebastien Arnal</h1>
-  <img src="images/avatar.png " alt="Describe your avatar here"width=300>
-  <p>Hi my name is Sebastien and im in the game development department.</p>
-  <p>Hello my name is Sebastien and im 14 years old. I am a student at Sutherland Secondary School.</p>
+  <!-- CHANGED: <nav> moved inside <body> (it was above <html>). -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="work.html">My Work</a>
+  </nav>
 
-</ol> 
-<script src="js/script.js"></script>
+  <!-- CHANGED: content wrapped in <main> so the existing "main" rule in style.css is actually applied. -->
+  <main>
+    <h1>Sebastien Arnal</h1>
+    <!-- CHANGED: removed the trailing space in src (which can break the image path), added the missing space between attributes, quoted width, and replaced the placeholder alt text with a real description. -->
+    <img src="images/avatar.png" alt="Sebastien Arnal's avatar" width="300">
+    <!-- CHANGED: fixed capitalization and spelling ("im" -> "I'm", "Hi my name" -> "Hi, my name"). -->
+    <p>Hi, my name is Sebastien and I'm in the game development department.</p>
+    <p>Hello, my name is Sebastien and I'm 14 years old. I am a student at Sutherland Secondary School.</p>
+  </main>
+  <!-- CHANGED: removed the stray </ol> tag that had no matching <ol>. -->
+
+  <script src="js/script.js"></script>
 </body>
-</html> 
+</html>

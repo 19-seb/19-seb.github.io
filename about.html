@@ -1,61 +1,67 @@
-<link rel="stylesheet" href="css/style.css">
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Me</a>
-  <a href="work.html">My Work</a>
-</nav>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About Me —Sebastien</title>
+  <!-- CHANGED: added a viewport meta tag so the page scales properly on phones. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CHANGED: fixed spacing in the title ("About Me —Sebastien" -> "About Me — Sebastien"). -->
+  <title>About Me — Sebastien</title>
+  <!-- CHANGED: moved the stylesheet <link> into <head> (it was above the doctype in the body). -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Sebastien</h1>
-  <h2>My Story</h2>
-  <p>My name is Sebastien A, im orignally from alberta and i play soccer
+  <!-- CHANGED: <nav> moved inside <body> (it was above <html>). -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="work.html">My Work</a>
+  </nav>
 
-  </p>
-d
-  <h2>A Few Things I'm Into</h2>
-  <ul>
-    <li>I like to hangout with friends
-    <li>Im into Video Games
-    <li>I also like movies
-  </ul>
+  <!-- CHANGED: content wrapped in <main> so the existing "main" rule in style.css is applied. -->
+  <main>
+    <!-- CHANGED: the "About Me" <h1> was at the bottom of the page (after the content). Moved it to the top. It keeps id="bio-heading" so script.js can find it. -->
+    <h1 id="bio-heading">About Me</h1>
 
-  <h2>20 Questions About Me</h2>
-  <p>
-    Name: Your Name<br>
-    Birth Month: Your Birth Month and Astrological Sign<br>
-    Favourite Subject: Your Favourite Subject<br>
-  </p>
+    <h2>My Story</h2>
+    <!-- CHANGED: removed the stray "d" character that was floating between sections. Fixed spelling/capitalization ("orignally" -> "originally", "im" -> "I'm"). -->
+    <p>My name is Sebastien A. I'm originally from Alberta and I play soccer.</p>
 
-1.I dont mind being called Seb or Sebastien, which one is easier for you.
+    <h2>A Few Things I'm Into</h2>
+    <!-- CHANGED: closed the <li> tags and fixed "hangout" -> "hang out" and "Im" -> "I'm". -->
+    <ul>
+      <li>I like to hang out with friends.</li>
+      <li>I'm into video games.</li>
+      <li>I also like movies.</li>
+    </ul>
 
-<br>2. I am born on may 26 and i am a gemini.
-</br>3. My favourite subject beside this one would have to be P.E
-</br>4. I spend alot of my time playing video games.
-</br>5. My favourite show ever is Breaking Bad and Prison Break.
-</br>6. I play soccer.
-</br>7. Im really good at drawing.
-</br>8. My favourite food is Pho and Smashed Burgers.
-</br>9. If i had a super power it would probably super strength.
-</br>10. I dont really have a weird food combination but i like pickle ketchup.
-</br>11. I haev one dog and her name is Rose (You pernouce it like Rosy).
-</br>12. My goal for this class is to get atleast a proficiant.
-</br>13. Im good at drawing.
-</br>14. I would like to visit Australia.
-</br>15. My favourite season is winter beacause of Christmas and your able to ski.
-</br>16. A fun fact that most people dont know about me, is that i used to be a competative swimmer.
-</br>17. Night Owl.
-</br>18. My favourite way to spend a weekend is simply by doing nothing.
-</br>19. Breaking Bad or Prison Break
-</br>20. I would like to build a website, app or game.
+    <h2>20 Questions About Me</h2>
+    <!-- CHANGED: removed the template block ("Name: Your Name", "Birth Month: Your Birth Month...", "Favourite Subject: Your Favourite Subject"). These are already answered in the list below. -->
+    <!-- CHANGED: the 20 answers were loose text separated by </br> tags, which is invalid HTML. Converted them to a numbered list. Spelling and capitalization fixed in each answer; the wording is otherwise unchanged. -->
+    <ol>
+      <li>I don't mind being called Seb or Sebastien. Which one is easier for you?</li>
+      <li>I was born on May 26 and I am a Gemini.</li>
+      <li>My favourite subject besides this one would have to be P.E.</li>
+      <li>I spend a lot of my time playing video games.</li>
+      <li>My favourite show ever is Breaking Bad and Prison Break.</li>
+      <li>I play soccer.</li>
+      <li>I'm really good at drawing.</li>
+      <li>My favourite food is pho and smashed burgers.</li>
+      <li>If I had a super power, it would probably be super strength.</li>
+      <li>I don't really have a weird food combination, but I like pickle ketchup.</li>
+      <li>I have one dog and her name is Rose (you pronounce it like "Rosy").</li>
+      <li>My goal for this class is to get at least a proficient.</li>
+      <li>I'm good at drawing.</li>
+      <li>I would like to visit Australia.</li>
+      <li>My favourite season is winter because of Christmas and you're able to ski.</li>
+      <li>A fun fact that most people don't know about me is that I used to be a competitive swimmer.</li>
+      <li>Night owl.</li>
+      <li>My favourite way to spend a weekend is simply doing nothing.</li>
+      <li>Breaking Bad or Prison Break.</li>
+      <li>I would like to build a website, app, or game.</li>
+    </ol>
+  </main>
 
-<script src="js/script.js"></script>
-
-<h1 id="bio-heading">About Me</h1>
-
+  <!-- CHANGED: moved the script tag from the middle of the page to the end of <body> (best practice, and it runs after the page content is loaded). -->
+  <script src="js/script.js"></script>
 </body>
 </html>

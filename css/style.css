@@ -1,7 +1,9 @@
+/* CHANGED: The original file had body, nav, nav a and the heading rules written twice. Each later copy overrode the earlier one, so the earlier copies did nothing. I merged each one into a single rule. Where the two copies disagreed, I kept the value that was actually being applied (the later one), unless noted below. */
+
 body {
     margin: 0;
     padding: 20px;
-    background-color: #fff0f6;
+    background-color: antiquewhite; /* CHANGED: the first rule said #fff0f6 but the second rule (antiquewhite) overrode it. Kept antiquewhite. */
     color: #333;
     font-family: "Comic Sans MS", "Arial Rounded MT Bold", sans-serif;
 }
@@ -9,16 +11,16 @@ body {
 /* Navigation bar */
 nav {
     display: flex;
-    gap: 25px;
-    padding: 15px 20px;
-    background-color: #000000;
+    gap: 20px;                       /* CHANGED: merged two conflicting values (25px / 20px). Kept 20px. */
+    padding: 20px;                   /* CHANGED: merged two conflicting values (15px 20px / 20px). Kept 20px. */
+    background-color: #305b9b;       /* CHANGED: the first rule made the nav black, but the second rule made it blue. Kept blue. */
     border-radius: 20px;
     box-shadow: 0 4px 10px #000000;
 }
 
 /* Navigation links */
 nav a {
-    color: white;
+    color: rgb(245, 245, 245);
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
@@ -26,12 +28,15 @@ nav a {
 
 /* Makes links change when you hover */
 nav a:hover {
-    color: #ffe4f1;
+    color: #ffe4f1;                  /* CHANGED: the second rule changed the hover colour to black, which is hard to read on the blue nav (about 3:1 contrast). Restored the pink from the first rule (about 6:1). */
+    text-decoration: underline;      /* CHANGED: added so the hover state is visible even without a colour change. */
 }
 
 /* ALL titles and headings */
 h1, h2, h3, h4, h5, h6 {
     font-family: "Arial Rounded MT Bold", "Comic Sans MS", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
     color: #000000;
     text-shadow: 2px 2px white;
 }
@@ -48,7 +53,8 @@ p {
 }
 
 /* Lists */
-ul {
+/* CHANGED: added ol so the numbered list on about.html gets the same box style as the bulleted lists. */
+ul, ol {
     background-color: white;
     padding: 20px 40px;
     border-radius: 20px;
@@ -70,33 +76,8 @@ main {
     box-shadow: 0 5px 15px #000000;
 }
 
-
-
-
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Arial Rounded MT Bold", "Comic Sans MS", sans-serif;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-body {
-    background-color: antiquewhite;
-}
- 
-nav {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-  background-color: #305b9b;
-}
- 
-nav a {
-  text-decoration: none;
-  color: rgb(245, 245, 245);
-  font-weight: bold;
-}
- 
-nav a:hover {
-  color:rgb(0, 0, 0)
+/* CHANGED: stops images from running off the edge of the screen on small phones. */
+img {
+    max-width: 100%;
+    height: auto;
 }
